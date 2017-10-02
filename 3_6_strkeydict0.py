@@ -16,6 +16,9 @@ class StrKeyDict0(dict):
         #此处不用key in self,是因为如果这么用回导致__contains__被递归调用
         return key in self.keys() or str(key) in self.keys()
 
+    def __setitem__(self, key, item):
+        self[key] = item
+
 if __name__ == '__main__':
     d = StrKeyDict0([('2', 'two'), ('4', 'four')])
     print(d['2'])
