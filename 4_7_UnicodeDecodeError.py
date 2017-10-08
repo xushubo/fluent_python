@@ -6,4 +6,7 @@ try:
     octets.decode('utf-8')
 except UnicodeDecodeError:
     print('UnicodeDecodeError')
-print()
+print(octets.decode('utf-8', errors='replace'))
+
+str1 = 'Montréal'
+print(str1.encode('utf-8').decode('utf-8'))
