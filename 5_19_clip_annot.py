@@ -19,6 +19,7 @@ from inspect import signature
 
 sig = signature(clip)
 print(sig)
+print(type(sig))
 print(sig.return_annotation)
 
 for param in sig.parameters.values():
