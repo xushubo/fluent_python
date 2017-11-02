@@ -22,3 +22,10 @@ class LotteryBlower(Tombola):
 
     def inspect(self):
         return tuple(sorted(self._balls))
+
+print(LotteryBlower.__mro__)
+
+def print_mro(cls):
+    print(', '.join(c.__name__ for c in cls.__mro__))
+
+print_mro(LotteryBlower)

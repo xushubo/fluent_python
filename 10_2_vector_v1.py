@@ -93,6 +93,9 @@ class Vector:
     def frombytes(cls, octets):
         typecode = chr(octets[0])
         memv = memoryview(octets[1:]).cast(typecode)
+<<<<<<< HEAD
+        return cls(memv)
+=======
         return cls(memv)
 
 v1 = Vector([3, 4, 5])
@@ -110,3 +113,4 @@ print(v.x)
 # v.g = 10
 print(v.x)
 print(repr(v))
+>>>>>>> 2c2f06b185753fc96e030e5210e3a5c7e656e349

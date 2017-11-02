@@ -13,8 +13,8 @@ print_mro(io.BytesIO)
 print_mro(io.TextIOWrapper)
 
 import tkinter
+print_mro(tkinter.Text)
 print_mro(tkinter.Toplevel)
 print_mro(tkinter.Widget)
 print_mro(tkinter.Button)
 print_mro(tkinter.Entry)
-print_mro(tkinter.Text)
