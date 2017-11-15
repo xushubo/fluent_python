@@ -1,5 +1,6 @@
 import itertools
-from tombola import tombola
+import random
+from tombola import Tombola
 
 class BingoCage(Tombola):
 
@@ -41,3 +42,21 @@ class AddableBingoCage(BingoCage):
                 raise TypeError(msg.format(self_cls))
         self.load(other_iterable)
         return self
+
+
+vowels = 'AEIOU'
+globe = AddableBingoCage(vowels)
+print(globe.inspect())
+print(globe.pick() in vowels)
+print(len(globe.inspect()))
+globe2 = AddableBingoCage('XYZ')
+globe3 = globe + globe2
+print(len(globe3.inspect()))
+globe_orig = globe
+print(len(globe_orig.inspect()))
+globe += globe2
+print(len(globe.inspect()))
+globe += ['M', 'N']
+print(len(globe.inspect()))
+print(globe is globe_orig)
+globe += 1
