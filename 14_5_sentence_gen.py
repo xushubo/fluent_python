@@ -16,3 +16,19 @@ class Sentence:
         for word in self.words:
             yield word
         return
+
+s = Sentence('"The time has come," the Walrus said,')
+print(s)
+for word in s:
+    print(word, end=' ')
+print('\n')
+print(list(s))
+
+s3 = Sentence('Pig and Pepper')
+it = iter(s3)
+print(it)
+print(next(it))
+print(next(it))
+print(next(it))
+print(list(it))
+print(list(s3))
