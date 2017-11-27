@@ -21,3 +21,12 @@ with LookingGlass() as what:
     print(what)
 print(what)
 print('back to normal.')
+
+manager = LookingGlass()
+print(manager)
+monster = manager.__enter__()
+print(monster == 'JABBERWOCKY')
+print(monster)
+print(manager)
+manager.__exit__(None, None, None)
+print(monster)
