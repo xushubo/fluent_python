@@ -13,7 +13,7 @@ def spin(msg, signal):
         write(status)
         flush()
         write('\x08' * len(status))
-        time.sleep(1)
+        time.sleep(.1)
         if not signal.go:
             break
     write(' ' * len(status) + '\x08' * len(status))
